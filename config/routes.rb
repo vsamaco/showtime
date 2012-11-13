@@ -1,9 +1,12 @@
 Showtime::Application.routes.draw do
+  get "genres/index"
+
   get "movies/new"
 
   get "movies/index"
   
   resources :movies
+  resources :genres
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
