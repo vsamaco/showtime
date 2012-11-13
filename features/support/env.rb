@@ -57,3 +57,14 @@ end
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
+require 'webrat'
+require 'webrat/core/matchers'
+
+Webrat.configure do |config|
+  config.mode = :rack
+  config.open_error_files = false # Set to true if you want error pages to pop up in the browser
+end
+
+
+
+
