@@ -10,3 +10,10 @@ When /^I create a movie Caddyshack in the Comedy genre$/ do
   check "Comedy"
   click_button "Save"
 end
+
+Then /^Caddyshack should be in the Comedy genre$/ do
+  visit genres_path
+  click_link "Comedy"
+  respond.should contain("1 movie")
+  respond.should contain("Caddyshack")
+end
