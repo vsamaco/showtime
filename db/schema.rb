@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121113032225) do
+ActiveRecord::Schema.define(:version => 20121113035901) do
 
   create_table "genres", :force => true do |t|
     t.string   "name"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(:version => 20121113032225) do
     t.time     "showtime_time"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.string   "title"
+    t.integer  "release_year"
   end
 
 end
