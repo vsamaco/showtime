@@ -4,6 +4,7 @@ class MoviesController < ApplicationController
   
   def new
     @movie = Movie.new
-    @genre = Genre.all
+    @genres = Genre.all
   end
+  
 end
