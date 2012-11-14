@@ -25,6 +25,7 @@ group :test do
   gem "cucumber-rails", ">= 0.3.2"
   gem "webrat", ">= 0.7.2"
   gem "database_cleaner"
+  gem "selenium-client"
 end
 
 gem 'jquery-rails'

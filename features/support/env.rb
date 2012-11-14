@@ -65,6 +65,22 @@ Webrat.configure do |config|
   config.open_error_files = false # Set to true if you want error pages to pop up in the browser
 end
 
+World(Rack::Test::Methods)
+World(Webrat::Methods)
+
+ActionController::Base.allow_rescue = false
+
+Cucumber::Rails::World.use_transactional_fixtures = false
+
+if defined?(ActiveRecord::Base)
+  begin
+    require 'database_cleaner'
+    DatabaseCleaner.strategy = :truncation
+  rescue LoadError => ignore_if_database_cleaner_not_present
+  end
+end
+
+
 
 
 
